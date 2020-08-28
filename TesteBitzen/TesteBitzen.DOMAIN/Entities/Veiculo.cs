@@ -1,4 +1,6 @@
-﻿namespace TesteBitzen.DOMAIN.Entities
+﻿using System.Collections.Generic;
+
+namespace TesteBitzen.DOMAIN.Entities
 {
     public class Veiculo : BaseEntitie
     {
@@ -25,6 +27,7 @@
         public int UsuarioId { get; private set; }
         public Usuario Usuario { get; private set; }
         public string Foto { get; private set; }
+        public IEnumerable<Abastecimento> Abastecimentos { get; set; }
 
         public void AlterarQuilomegragem(int quilometragem)
         {
@@ -36,6 +39,10 @@
             Foto = foto;
         }
 
+        public void AlterarPlaca(string placa)
+        {
+            Placa = placa;
+        }
 
     }
 }

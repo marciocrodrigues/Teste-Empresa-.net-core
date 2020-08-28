@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EAIYHxMzhUTvPJQ+5DBYBn4RPqqjHZkNlxKaeUfAU1/9Ek+q73F5FUUdK1vqE63nl2iKTGvXKmfW48mRzQnQmA==",
+  "dgSpecHash": "5E01zCnNbWN8u2wWnDciKIF4PXuMlBkRr4Q0R+2UK2o53musgFOwwQuCCy3RdtD3rZXV540DppwoceXdTC5PSA==",
   "success": true,
-  "projectFilePath": "C:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.TESTS\\TesteBitzen.TESTS.csproj",
+  "projectFilePath": "c:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.TESTS\\TesteBitzen.TESTS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marci\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",

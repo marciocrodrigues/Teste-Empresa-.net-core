@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\TesteBitzen.API.csproj": {}
+    "c:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\TesteBitzen.API.csproj": {}
   },
   "projects": {
-    "C:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\TesteBitzen.API.csproj": {
+    "c:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\TesteBitzen.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\TesteBitzen.API.csproj",
+        "projectUniqueName": "c:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\TesteBitzen.API.csproj",
         "projectName": "TesteBitzen.API",
-        "projectPath": "C:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\TesteBitzen.API.csproj",
+        "projectPath": "c:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\TesteBitzen.API.csproj",
         "packagesPath": "C:\\Users\\marci\\.nuget\\packages\\",
-        "outputPath": "C:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\obj\\",
+        "outputPath": "c:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -40,6 +40,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Flunt": {
+              "target": "Package",
+              "version": "[1.0.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

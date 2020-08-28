@@ -4,7 +4,9 @@ namespace TesteBitzen.DOMAIN.Entities
 {
     public class Usuario : BaseEntitie
     {
-        public Usuario(string email, string senha, string nome)
+        public Usuario(string email, 
+                       string senha, 
+                       string nome)
         {
             Email = email;
             Senha = senha;
@@ -14,7 +16,7 @@ namespace TesteBitzen.DOMAIN.Entities
         public string Email { get; private set; }
         public string Senha { get; private set; }
         public string Nome { get; private set; }
-        public virtual IEnumerable<Veiculo> Veiculos { get; set; }
+        public IEnumerable<Veiculo> Veiculos { get; set; }
 
         public void AlterarEmail(string email)
         {

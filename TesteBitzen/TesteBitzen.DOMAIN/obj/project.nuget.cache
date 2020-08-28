@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2Px72Yq2EZyKZNdFtHYoKZc0/JFeiDGs2I64RHA5msDQr3cuDPGf/W6cItGG/n4mL5fSBWi/thzO1dfT+b+ruQ==",
+  "dgSpecHash": "YwqwBWClPlEaTHr2gBvBOpW5i8EbCFkvduXx/Uv9yXJi6vEJb3VtHEM1AFonmhq3B8MtdfXY8LxvUd4oo5rR+g==",
   "success": true,
-  "projectFilePath": "C:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.DOMAIN\\TesteBitzen.DOMAIN.csproj",
+  "projectFilePath": "c:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.DOMAIN\\TesteBitzen.DOMAIN.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
