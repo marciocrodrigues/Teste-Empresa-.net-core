@@ -1,11 +1,36 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "Flunt/1.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Flunt.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Flunt.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Flunt/1.0.5": {
+      "sha512": "2p1B/LLsMf0bGwyMQK48/278OXTodXn3HyTU1v7fr/x0bNfrVSNC1Do1PxbgiOlDLChtAbtt1kPgXFqUnGAagg==",
+      "type": "package",
+      "path": "flunt/1.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "flunt.1.0.5.nupkg.sha512",
+        "flunt.nuspec",
+        "lib/netstandard2.0/Flunt.dll"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "Flunt >= 1.0.5"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\marci\\.nuget\\packages\\": {},
@@ -14,11 +39,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\TesteBitzen.API.csproj",
+      "projectUniqueName": "c:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\TesteBitzen.API.csproj",
       "projectName": "TesteBitzen.API",
-      "projectPath": "C:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\TesteBitzen.API.csproj",
+      "projectPath": "c:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\TesteBitzen.API.csproj",
       "packagesPath": "C:\\Users\\marci\\.nuget\\packages\\",
-      "outputPath": "C:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\obj\\",
+      "outputPath": "c:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -47,6 +72,12 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "dependencies": {
+          "Flunt": {
+            "target": "Package",
+            "version": "[1.0.5, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
