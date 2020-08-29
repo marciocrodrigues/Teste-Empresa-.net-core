@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "5E01zCnNbWN8u2wWnDciKIF4PXuMlBkRr4Q0R+2UK2o53musgFOwwQuCCy3RdtD3rZXV540DppwoceXdTC5PSA==",
+  "dgSpecHash": "ky3cwew1H5iYR5Cyzo0uUFOIsqET3Mw3f6F5Vf+l6ajcsKqHl6MTrYVpuFUDRK083eUy1hzZmURVuP/Ar07THA==",
   "success": true,
-  "projectFilePath": "c:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.TESTS\\TesteBitzen.TESTS.csproj",
+  "projectFilePath": "C:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.TESTS\\TesteBitzen.TESTS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marci\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
+    "C:\\Users\\marci\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",

@@ -9,9 +9,9 @@ namespace TesteBitzen.DOMAIN.Entities
                              decimal valorAbastecimento, 
                              DateTime dataAbastecimento, 
                              string postoCombustivel, 
-                             int usuarioId,  
+                             Guid usuarioId,  
                              string tipoCombustivel, 
-                             int veiculoId)
+                             Guid veiculoId)
         {
           KmAbastecimento = kmAbastecimento;
           LitrosAbastecidos = litrosAbastecidos;
@@ -28,10 +28,10 @@ namespace TesteBitzen.DOMAIN.Entities
         public decimal ValorAbastecimento { get; private set; }
         public DateTime DataAbastecimento { get; private set; }
         public string PostoCombustivel { get; private set; }
-        public int UsuarioId { get; private set; }
+        public Guid UsuarioId { get; private set; }
         public Usuario Usuario { get; private set; }
         public string TipoCombustivel { get; private set; }
-        public int VeiculoId { get; private set; }
+        public Guid VeiculoId { get; private set; }
         public Veiculo Veiculo { get; private set; }
 
         public void AlterarKmAbastecimetno(int kmabastecimento)

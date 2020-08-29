@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\TesteBitzen.API.csproj": {}
+    "C:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\TesteBitzen.API.csproj": {}
   },
   "projects": {
-    "c:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\TesteBitzen.API.csproj": {
+    "C:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\TesteBitzen.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\TesteBitzen.API.csproj",
+        "projectUniqueName": "C:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\TesteBitzen.API.csproj",
         "projectName": "TesteBitzen.API",
-        "projectPath": "c:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\TesteBitzen.API.csproj",
+        "projectPath": "C:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\TesteBitzen.API.csproj",
         "packagesPath": "C:\\Users\\marci\\.nuget\\packages\\",
-        "outputPath": "c:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\obj\\",
+        "outputPath": "C:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

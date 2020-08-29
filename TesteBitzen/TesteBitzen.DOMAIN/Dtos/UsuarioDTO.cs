@@ -1,8 +1,8 @@
 using Flunt.Notifications;
 using Flunt.Validations;
-using TesteBitzen.API.Dtos.Interfaces;
+using TesteBitzen.DOMAIN.Dtos.Interfaces;
 
-namespace TesteBitzen.API.Dtos
+namespace TesteBitzen.DOMAIN.Dtos
 {
   public class UsuarioDTO : Notifiable ,IBaseDTO
   {
@@ -25,8 +25,8 @@ namespace TesteBitzen.API.Dtos
           new Contract()
             .Requires()
             .IsEmailOrEmpty(Email, "Email", "E-mail invalido")
-            .IsNullOrEmpty(Senha, "Senha", "Senha é obrigatoria")
-            .IsNullOrEmpty(Nome, "Nome", "Nome é obrigatorio")
+            .IsNotNullOrEmpty(Senha, "Senha", "Senha é obrigatoria")
+            .IsNotNullOrEmpty(Nome, "Nome", "Nome é obrigatorio")
       );
     }
   }

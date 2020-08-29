@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "YwqwBWClPlEaTHr2gBvBOpW5i8EbCFkvduXx/Uv9yXJi6vEJb3VtHEM1AFonmhq3B8MtdfXY8LxvUd4oo5rR+g==",
+  "dgSpecHash": "0QZZ1/fb5DhJW/cz8gtWqKuj3mZOcd9hmDgwnG8MUtdXNleiH/90rNG/5aNGg77siuEaSVbpLUN1q0zjVsVJuQ==",
   "success": true,
-  "projectFilePath": "c:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.DOMAIN\\TesteBitzen.DOMAIN.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.DOMAIN\\TesteBitzen.DOMAIN.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\marci\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512"
+  ],
   "logs": []
 }
