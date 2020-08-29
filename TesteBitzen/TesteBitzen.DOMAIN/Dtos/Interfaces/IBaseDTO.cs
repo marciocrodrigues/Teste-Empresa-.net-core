@@ -1,6 +1,6 @@
 using Flunt.Validations;
 
-namespace TesteBitzen.API.Dtos.Interfaces
+namespace TesteBitzen.DOMAIN.Dtos.Interfaces
 {
     public interface IBaseDTO : IValidatable
     {

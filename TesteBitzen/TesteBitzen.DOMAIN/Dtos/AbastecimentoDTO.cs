@@ -1,9 +1,9 @@
 using System;
 using Flunt.Notifications;
 using Flunt.Validations;
-using TesteBitzen.API.Dtos.Interfaces;
+using TesteBitzen.DOMAIN.Dtos.Interfaces;
 
-namespace TesteBitzen.API.Dtos
+namespace TesteBitzen.DOMAIN.Dtos
 {
   public class AbastecimentoDTO : Notifiable, IBaseDTO
   {

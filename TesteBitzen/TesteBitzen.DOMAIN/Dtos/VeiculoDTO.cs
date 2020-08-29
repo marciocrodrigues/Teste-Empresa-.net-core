@@ -1,7 +1,7 @@
 using Flunt.Notifications;
 using Flunt.Validations;
-using Microsoft.AspNetCore.Http;
-using TesteBitzen.API.Dtos.Interfaces;
+using System;
+using TesteBitzen.DOMAIN.Dtos.Interfaces;
 
 namespace TesteBitzen.API.Dtos
 {
@@ -16,8 +16,8 @@ namespace TesteBitzen.API.Dtos
                       string tipoVeiculo, 
                       string tipoCombustivel, 
                       int quilometragem, 
-                      int usuarioId, 
-                      IFormFile foto)
+                      Guid usuarioId, 
+                      string foto)
     {
       Marca = marca;
       Modelo = modelo;
@@ -37,20 +37,20 @@ namespace TesteBitzen.API.Dtos
     public string TipoVeiculo { get; set; }
     public string TipoCombustivel { get; set; }
     public int Quilometragem { get; set; }
-    public int UsuarioId { get; set; }
-    public IFormFile Foto { get; set; }
+    public Guid UsuarioId { get; set; }
+    public string Foto { get; set; }
     public void Validate()
     {
       AddNotifications(
           new Contract()
             .Requires()
-            .IsNullOrEmpty(Marca, "Marca", "Marca é obrigatoria")
-            .IsNullOrEmpty(Modelo, "Modelo", "Modelo é obrigatorio")
+            .IsNotNullOrEmpty(Marca, "Marca", "Marca é obrigatoria")
+            .IsNotNullOrEmpty(Modelo, "Modelo", "Modelo é obrigatorio")
             .IsGreaterThan(Ano, 1900, "Ano", "Ano deve ser um valor valido")
-            .IsNullOrEmpty(Placa, "Placa", "Placa é obrigatoria")
-            .IsNullOrEmpty(TipoVeiculo, "TipoVeiculo", "TipoVeiculo é obrigatorio")
-            .IsNullOrEmpty(TipoCombustivel, "TipoCombustivel", "TipoCombustivel é obrigatorio")
-            .IsGreaterThan(UsuarioId, 0, "UsuarioId", "UsuarioId é obrigatorio")
+            .IsNotNullOrEmpty(Placa, "Placa", "Placa é obrigatoria")
+            .IsNotNullOrEmpty(TipoVeiculo, "TipoVeiculo", "TipoVeiculo é obrigatorio")
+            .IsNotNullOrEmpty(TipoCombustivel, "TipoCombustivel", "TipoCombustivel é obrigatorio")
+            .IsNotNullOrEmpty(UsuarioId.ToString(), "UsuarioId", "UsuarioId é obrigatorio")
       );
     }
   }

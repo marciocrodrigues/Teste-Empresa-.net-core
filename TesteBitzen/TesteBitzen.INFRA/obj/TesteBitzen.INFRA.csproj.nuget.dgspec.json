@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.INFRA\\TesteBitzen.INFRA.csproj": {}
+    "C:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.INFRA\\TesteBitzen.INFRA.csproj": {}
   },
   "projects": {
-    "c:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.INFRA\\TesteBitzen.INFRA.csproj": {
+    "C:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.INFRA\\TesteBitzen.INFRA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.INFRA\\TesteBitzen.INFRA.csproj",
+        "projectUniqueName": "C:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.INFRA\\TesteBitzen.INFRA.csproj",
         "projectName": "TesteBitzen.INFRA",
-        "projectPath": "c:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.INFRA\\TesteBitzen.INFRA.csproj",
+        "projectPath": "C:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.INFRA\\TesteBitzen.INFRA.csproj",
         "packagesPath": "C:\\Users\\marci\\.nuget\\packages\\",
-        "outputPath": "c:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.INFRA\\obj\\",
+        "outputPath": "C:\\testes\\TesteBitzen\\TesteBitzen\\TesteBitzen.INFRA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
