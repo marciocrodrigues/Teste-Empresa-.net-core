@@ -65,7 +65,7 @@ namespace TesteBitzen.DOMAIN.Services.Usuarios
 
             if (usuario == null)
             {
-                return new RetornoDTO(false, "Nenhum usuário encontrado", null);
+                return new RetornoDTO(false, "Usuário não encontrado", null);
             }
 
             return new RetornoDTO(true, "", usuario);
@@ -80,7 +80,7 @@ namespace TesteBitzen.DOMAIN.Services.Usuarios
                 return new RetornoDTO(true, "", usuarios);
             }
 
-            return new RetornoDTO(false, "", null);
+            return new RetornoDTO(false, "Nenhum usuário encontrado", null);
         }
 
         public IRetorno Criar(UsuarioDTO dto)
@@ -107,9 +107,9 @@ namespace TesteBitzen.DOMAIN.Services.Usuarios
         {
             var usuario = _repository.BuscarPorId(id);
 
-            if(usuario == null)
+            if (usuario == null)
             {
-                return new RetornoDTO(false, "Usuário não encontrado para exclusão", null);
+                return new RetornoDTO(false, "Usuário não encontrado", null);
             }
 
             if (!_repository.Excluir(usuario))

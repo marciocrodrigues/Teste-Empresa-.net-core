@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using TesteBitzen.API.Dtos;
 using TesteBitzen.DOMAIN.Dtos;
 using TesteBitzen.DOMAIN.Entities;
 using TesteBitzen.DOMAIN.Interfaces;
@@ -18,7 +15,13 @@ namespace TesteBitzen.DOMAIN.Services.Veiculos
         {
             _repository = repository;
         }
+
         public IRetorno Alterar(Guid id, VeiculoDTO dto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IRetorno AlterarVeiculo(Guid id, AlterarVeiculoDTO dto)
         {
             dto.Validate();
 
@@ -28,8 +31,13 @@ namespace TesteBitzen.DOMAIN.Services.Veiculos
             }
 
             var veiculo = _repository.BuscarPorId(id);
+
+            if (veiculo == null)
+            {
+                return new RetornoDTO(false, "Veiculo não encontrado", null);
+            }
+
             veiculo.AlterarPlaca(dto.Placa);
-            veiculo.AlterarFoto(dto.Foto);
 
             if (!_repository.Alterar(veiculo))
             {
@@ -60,14 +68,14 @@ namespace TesteBitzen.DOMAIN.Services.Veiculos
                 return new RetornoDTO(true, "", veiculos);
             }
 
-            return new RetornoDTO(false, "Nenhum veiculo cadastrado", null);
+            return new RetornoDTO(false, "Nenhum veiculo encontrado", null);
         }
 
         public IRetorno BuscarVeiculosPorUsuario(Guid UsuarioId)
         {
             var veiculos = _repository.BuscarVeiculosPorUsuario(UsuarioId);
 
-            if(veiculos.ToList().Count > 0)
+            if (veiculos.ToList().Count > 0)
             {
                 return new RetornoDTO(true, "", veiculos);
             }
@@ -84,7 +92,7 @@ namespace TesteBitzen.DOMAIN.Services.Veiculos
                 return new RetornoDTO(false, "Erro na Requisição, verificar valores enviado", dto.Notifications);
             }
 
-            var veiculo = new Veiculo(dto.Marca, dto.Modelo, dto.Ano, dto.Placa, dto.TipoVeiculo, dto.TipoCombustivel, dto.Quilometragem, dto.UsuarioId, dto.Foto);
+            var veiculo = new Veiculo(dto.Marca, dto.Modelo, dto.Ano, dto.Placa, dto.TipoVeiculo, dto.TipoCombustivel, dto.Quilometragem, dto.UsuarioId);
 
             if (!_repository.Criar(veiculo))
             {
@@ -100,7 +108,7 @@ namespace TesteBitzen.DOMAIN.Services.Veiculos
 
             if (veiculo == null)
             {
-                return new RetornoDTO(false, "Veiculo não encontrado para exclusão", null);
+                return new RetornoDTO(false, "Veiculo não encontrado", null);
             }
 
             if (!_repository.Excluir(veiculo))
@@ -109,6 +117,28 @@ namespace TesteBitzen.DOMAIN.Services.Veiculos
             }
 
             return new RetornoDTO(true, "Veiculo removido com sucesso", null);
+        }
+
+        public IRetorno IncluirFotoVeiculo(Guid id, string foto)
+        {
+            var veiculo = _repository.BuscarPorId(id);
+            
+            if(veiculo == null)
+            {
+                return new RetornoDTO(false, "Veiculo não encontrado", null);
+            }
+
+            if (!string.IsNullOrEmpty(foto))
+            {
+                veiculo.AlterarFoto(foto);
+            }
+
+            if (!_repository.Alterar(veiculo))
+            {
+                return new RetornoDTO(false, "Erro ao tentar incluir foto para o veiculo", null);
+            }
+
+            return new RetornoDTO(true, "Foto incluida com sucesso", veiculo);
         }
     }
 }
