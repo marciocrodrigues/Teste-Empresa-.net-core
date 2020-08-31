@@ -3,7 +3,7 @@ using Flunt.Validations;
 using System;
 using TesteBitzen.DOMAIN.Dtos.Interfaces;
 
-namespace TesteBitzen.API.Dtos
+namespace TesteBitzen.DOMAIN.Dtos
 {
   public class VeiculoDTO : Notifiable, IBaseDTO
   {
@@ -16,8 +16,7 @@ namespace TesteBitzen.API.Dtos
                       string tipoVeiculo, 
                       string tipoCombustivel, 
                       int quilometragem, 
-                      Guid usuarioId, 
-                      string foto)
+                      Guid usuarioId)
     {
       Marca = marca;
       Modelo = modelo;
@@ -27,7 +26,6 @@ namespace TesteBitzen.API.Dtos
       TipoCombustivel = tipoCombustivel;
       Quilometragem = quilometragem;
       UsuarioId = usuarioId;
-      Foto = foto;
     }
 
     public string Marca { get; set; }

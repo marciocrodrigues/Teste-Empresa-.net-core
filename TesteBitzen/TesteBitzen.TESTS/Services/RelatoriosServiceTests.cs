@@ -1,8 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using TesteBitzen.API.Dtos;
 using TesteBitzen.DOMAIN.Dtos;
 using TesteBitzen.DOMAIN.Entities;
 using TesteBitzen.DOMAIN.Services.Abastecimentos;
@@ -33,7 +30,7 @@ namespace TesteBitzen.TESTS.Services
             _serviceAbastecimento = new AbastecimentoService(fakeAbastecimento, fakeVeiculo);
             _service = new RelatorioService(fakeAbastecimento);
             usuarioId = Guid.NewGuid();
-            var veiculoDTO = new VeiculoDTO("VW", "GOL G5", 2019, "ABC-1234", "Carro", "Alcool", 0, usuarioId, "carro.jpg");
+            var veiculoDTO = new VeiculoDTO("VW", "GOL G5", 2019, "ABC-1234", "Carro", "Alcool", 0, usuarioId);
             cadVeiculo = (Veiculo)_serviceVeiculo.Criar(veiculoDTO).Data;
             _abastecimento1 = new AbastecimentoDTO(100, 50, 150.00, DateTime.Now, "Post Ipiranga", usuarioId, "Alcool", cadVeiculo.Id);
             _abastecimento2 = new AbastecimentoDTO(200, 50, 150.00, DateTime.Now, "Post Ipiranga", usuarioId, "Alcool", cadVeiculo.Id);

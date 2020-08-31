@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using TesteBitzen.API.Dtos;
 using TesteBitzen.DOMAIN.Dtos;
 using TesteBitzen.DOMAIN.Entities;
 using TesteBitzen.DOMAIN.Services.Abastecimentos;
@@ -26,7 +25,7 @@ namespace TesteBitzen.TESTS.Services
             _service = new AbastecimentoService(new FakeAbastecimentoRepository(), fakeVeiculoRepository);
             _serviceVeiculo = new VeiculoService(fakeVeiculoRepository);
             usuarioId = Guid.NewGuid();
-            var veiculoDTO = new VeiculoDTO("VW", "GOL G5", 2019, "ABC-1234", "Carro", "Alcool", 0, usuarioId, "carro.jpg");
+            var veiculoDTO = new VeiculoDTO("VW", "GOL G5", 2019, "ABC-1234", "Carro", "Alcool", 0, usuarioId);
             cadVeiculo = (Veiculo)_serviceVeiculo.Criar(veiculoDTO).Data;
             _dtoBase = new AbastecimentoDTO(1001, 10.50, 60.00, DateTime.Now, "Posto Ipiranga", usuarioId, "Gasolina", cadVeiculo.Id);
         }

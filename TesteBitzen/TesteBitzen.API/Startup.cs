@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.JsonPatch.Operations;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -68,9 +69,9 @@ namespace TesteBitzen.API
             };
 
             OpenApiSecurityRequirement securityRequirements = new OpenApiSecurityRequirement()
-                {
-                    {securityScheme, new string[] { }},
-                };
+            {
+                {securityScheme, new string[] { }},
+            };
 
             options.AddSecurityRequirement(securityRequirements);
 
@@ -82,11 +83,11 @@ namespace TesteBitzen.API
             if (File.Exists(xmlDocumentPath))
             {
                 options.IncludeXmlComments(xmlDocumentPath);
+                options.OperationFilter<FileOperation>();
             }
 
             return options;
         }
-
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

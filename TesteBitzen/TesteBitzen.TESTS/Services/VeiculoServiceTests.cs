@@ -1,8 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using TesteBitzen.API.Dtos;
+using TesteBitzen.DOMAIN.Dtos;
 using TesteBitzen.DOMAIN.Entities;
 using TesteBitzen.DOMAIN.Services.Veiculos;
 using TesteBitzen.TESTS.Fakes;
@@ -20,7 +18,7 @@ namespace TesteBitzen.TESTS.Services
         {
             _service = new VeiculoService(new FakeVeiculoRepository());
             _usuarioId = Guid.NewGuid();
-            _dtoBase = new VeiculoDTO("VW", "Gol G5", 2019, "ABC-1234", "Carro", "Alcool/Gasolina", 0, _usuarioId, "foto.jpg");
+            _dtoBase = new VeiculoDTO("VW", "Gol G5", 2019, "ABC-1234", "Carro", "Alcool/Gasolina", 0, _usuarioId);
         }
 
         [TestMethod]
@@ -62,10 +60,10 @@ namespace TesteBitzen.TESTS.Services
             var id = veiculo.Id;
             var foto = veiculo.Foto;
             var placa = veiculo.Placa;
-            var veiculoAlterado = new VeiculoDTO(veiculo.Marca, veiculo.Modelo, veiculo.Ano, "DEF-1234", veiculo.Tipo, veiculo.Combustivel, 1000, _usuarioId, "foto2.png");
+            var veiculoAlterado = new VeiculoDTO(veiculo.Marca, veiculo.Modelo, veiculo.Ano, "DEF-1234", veiculo.Tipo, veiculo.Combustivel, 1000, _usuarioId);
             _service.Alterar(id, veiculoAlterado);
             Assert.AreEqual(
-                true, 
+                true,
                 ((veiculo.Foto != foto &&
                   veiculo.Placa != placa) && veiculo.Id == id)
             );

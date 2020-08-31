@@ -5,7 +5,7 @@ namespace TesteBitzen.DOMAIN.Entities
 {
     public class Veiculo : BaseEntitie
     {
-        public Veiculo(string marca, string modelo, int ano, string placa, string tipo, string combustivel, int quilometragemCadastro, Guid usuarioId, string foto)
+        public Veiculo(string marca, string modelo, int ano, string placa, string tipo, string combustivel, int quilometragemCadastro, Guid usuarioId)
         {
             Marca = marca;
             Modelo = modelo;
@@ -16,7 +16,6 @@ namespace TesteBitzen.DOMAIN.Entities
             QuilometragemCadastro = quilometragemCadastro;
             QuilometragemRodada = quilometragemCadastro;
             UsuarioId = usuarioId;
-            Foto = foto;
         }
 
         public string Marca { get; private set; }
@@ -46,6 +45,5 @@ namespace TesteBitzen.DOMAIN.Entities
         {
             Placa = placa;
         }
-
     }
 }

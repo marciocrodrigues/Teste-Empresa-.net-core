@@ -46,6 +46,43 @@
             <response code="400">Requisição inválida</response>
             <response code="401">Não Autorizado</response>
         </member>
+        <member name="M:TesteBitzen.API.Controllers.RelatorioController.AbastecimentoMensal">
+            <summary>
+            Quantidade mensal de litros abastecidos no periodo de um ano
+            </summary>
+            <response code="200">Sucesso no retorno</response>
+            <response code="400">Requisição inválida</response>
+            <response code="401">Não Autorizado</response>
+            <returns></returns>
+        </member>
+        <member name="M:TesteBitzen.API.Controllers.RelatorioController.PagamentoMensal">
+            <summary>
+            Valor mensal dos abastecimentos pagos no periodo de um ano
+            </summary>
+            <response code="200">Sucesso no retorno</response>
+            <response code="400">Requisição inválida</response>
+            <response code="401">Não Autorizado</response>
+            <returns></returns>
+        </member>
+        <member name="M:TesteBitzen.API.Controllers.RelatorioController.QuilometrosRodados">
+            <summary>
+            Quilometros rodados mensalmente no periodo de um ano
+            </summary>
+            <response code="200">Sucesso no retorno</response>
+            <response code="400">Requisição inválida</response>
+            <response code="401">Não Autorizado</response>
+            <returns></returns>
+        </member>
+        <member name="M:TesteBitzen.API.Controllers.RelatorioController.MediaMensalVeiculo(System.Guid)">
+            <summary>
+            Media mensal por veiculo(CAlculo de quantos km o carro faz por litro)
+            </summary>
+            <param name="idVeiculo"></param>
+            <response code="200">Sucesso no retorno</response>
+            <response code="400">Requisição inválida</response>
+            <response code="401">Não Autorizado</response>
+            <returns></returns>
+        </member>
         <member name="M:TesteBitzen.API.Controllers.UsuarioController.Cadastrar(TesteBitzen.DOMAIN.Dtos.UsuarioDTO)">
             <summary>
             Cadastrar novo usuario
@@ -95,7 +132,7 @@
             <response code="401">Requisição não autorizada</response>
             <returns></returns>
         </member>
-        <member name="M:TesteBitzen.API.Controllers.VeiculoController.Cadastrar(TesteBitzen.API.Dtos.VeiculoDTO)">
+        <member name="M:TesteBitzen.API.Controllers.VeiculoController.Cadastrar(TesteBitzen.DOMAIN.Dtos.VeiculoDTO)">
             <summary>
             Cadastro de veiculo
             </summary>
@@ -116,15 +153,18 @@
         <member name="M:TesteBitzen.API.Controllers.VeiculoController.BuscarPorId(System.Guid)">
             <summary>
             Buscar veiculo pelo identificador
+            <param name="id"></param>
             </summary>
             <response code="200">Sucesso no retorno</response>
             <response code="400">Requisição inválida</response>
             <response code="401">Não Autorizado</response>
         </member>
-        <member name="M:TesteBitzen.API.Controllers.VeiculoController.Alterar(System.Guid,TesteBitzen.API.Dtos.VeiculoDTO)">
+        <member name="M:TesteBitzen.API.Controllers.VeiculoController.Alterar(System.Guid,TesteBitzen.DOMAIN.Dtos.AlterarVeiculoDTO)">
             <summary>
             Alterar dados do veiculo
             </summary>
+            <param name="id"></param>
+            <param name="dto"></param>
             <response code="200">Sucesso no retorno</response>
             <response code="400">Requisição inválida</response>
             <response code="401">Não Autorizado</response>
@@ -133,9 +173,21 @@
             <summary>
             Excluir veiculo
             </summary>
+            <param name="id"></param>
             <response code="200">Sucesso no retorno</response>
             <response code="400">Requisição inválida</response>
             <response code="401">Não Autorizado</response>
+        </member>
+        <member name="M:TesteBitzen.API.Controllers.VeiculoController.IncluirFoto(System.Guid,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Incluir foto para um veiculo
+            </summary>
+            <param name="idVeiculo"></param>
+            <param name="arquivo"></param>
+            <response code="200">Sucesso no retorno</response>
+            <response code="400">Requisição inválida</response>
+            <response code="401">Não Autorizado</response>
+            <returns></returns>
         </member>
     </members>
 </doc>

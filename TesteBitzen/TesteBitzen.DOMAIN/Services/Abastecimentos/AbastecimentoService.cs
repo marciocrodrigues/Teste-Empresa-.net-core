@@ -34,7 +34,7 @@ namespace TesteBitzen.DOMAIN.Services.Abastecimentos
 
             if(abastecimento == null)
             {
-                return new RetornoDTO(false, "Abastecimento não encontrado para alteração", null);
+                return new RetornoDTO(false, "Abastecimento não encontrado", null);
             }
 
             abastecimento.AlterarDataAbastecimento(dto.DataAbastecimento);
@@ -55,7 +55,7 @@ namespace TesteBitzen.DOMAIN.Services.Abastecimentos
         {
             var abastecimento = _repository.BuscarPorId(id);
 
-            if(abastecimento == null)
+            if (abastecimento == null)
             {
                 return new RetornoDTO(false, "Abastecimento não encontrado", null);
             }
@@ -89,7 +89,7 @@ namespace TesteBitzen.DOMAIN.Services.Abastecimentos
 
             if(veiculo == null)
             {
-                return new RetornoDTO(false, "O veiculo selecionado não existe na base dedados", null);
+                return new RetornoDTO(false, "O veiculo selecionado não existe", null);
             }
 
             var quilometrosRodados = dto.KmAbastecimento - veiculo.QuilometragemRodada;
@@ -115,9 +115,9 @@ namespace TesteBitzen.DOMAIN.Services.Abastecimentos
         {
             var abastecimento = _repository.BuscarPorId(id);
 
-            if(abastecimento == null)
+            if (abastecimento == null)
             {
-                return new RetornoDTO(false, "Nenhum abastecimento encontrado", null);
+                return new RetornoDTO(false, "Abastecimento não encontrado", null);
             }
 
             if (!_repository.Excluir(abastecimento))
