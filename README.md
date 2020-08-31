@@ -20,10 +20,10 @@ Utilizando pelo comando dotnet run ou debug no Visual Studio a Api vai iniciar n
   -> bin
   -> v1
       -> Controllers
-          -> MedicoController.cs
+          -> UsuarioController.cs
   -> v2
       -> Controllers
-          -> MedicoController.cs
+          -> UsuarioController.cs
 ```
 **Projeto Domain**
  - **Dtos**     - Pasta onde ficam as classes de são utilizadas como parâmetro de entrada na api e Interfaces, para cada entidade foi criado uma pasta de mesmo nome
