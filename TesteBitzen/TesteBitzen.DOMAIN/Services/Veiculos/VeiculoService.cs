@@ -28,7 +28,6 @@ namespace TesteBitzen.DOMAIN.Services.Veiculos
             }
 
             var veiculo = _repository.BuscarPorId(id);
-            veiculo.AlterarQuilomegragem(dto.Quilometragem);
             veiculo.AlterarPlaca(dto.Placa);
             veiculo.AlterarFoto(dto.Foto);
 

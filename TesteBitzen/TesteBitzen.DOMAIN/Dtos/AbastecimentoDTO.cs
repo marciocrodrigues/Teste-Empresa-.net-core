@@ -11,12 +11,12 @@ namespace TesteBitzen.DOMAIN.Dtos
 
     public AbastecimentoDTO(int kmAbastecimento, 
                             double litrosAbastecidos, 
-                            decimal valorPago, 
+                            double valorPago, 
                             DateTime dataAbastecimento, 
                             string postoCombustivel, 
-                            int usuarioId, 
+                            Guid usuarioId, 
                             string tipoCombustivel, 
-                            int veiculoId)
+                            Guid veiculoId)
     {
       KmAbastecimento = kmAbastecimento;
       LitrosAbastecidos = litrosAbastecidos;
@@ -30,12 +30,12 @@ namespace TesteBitzen.DOMAIN.Dtos
 
     public int KmAbastecimento { get; set; }
     public double LitrosAbastecidos { get; set; }
-    public decimal ValorPago { get; set; }
+    public double ValorPago { get; set; }
     public DateTime DataAbastecimento { get; set; }
     public string PostoCombustivel { get; set; }
-    public int UsuarioId { get; set; }
+    public Guid UsuarioId { get; set; }
     public string TipoCombustivel { get; set; }
-    public int VeiculoId { get; set; }
+    public Guid VeiculoId { get; set; }
     public void Validate()
     {
         AddNotifications(
@@ -44,11 +44,11 @@ namespace TesteBitzen.DOMAIN.Dtos
                 .IsGreaterThan(KmAbastecimento, 0, "KmAbastecimento", "KmAbastecimento é obrigatorio")
                 .IsGreaterThan(LitrosAbastecidos, 0, "LitrosAbastecidos", "LitrosAbastecidos é obrigatorio")
                 .IsGreaterThan(ValorPago, 0, "ValorPago", "ValorPago é obrigatorio")
-                .IsNullOrEmpty(DataAbastecimento.ToString(), "DataAbastecimento", "DataAbastecimento é obrigatoria")
-                .IsNullOrEmpty(PostoCombustivel, "PostoCombustivel", "PostoCombustivel é obrigatorio")
-                .IsGreaterThan(UsuarioId, 0, "UsuarioId", "UsuarioId é obrigatorio")
-                .IsNullOrEmpty(TipoCombustivel, "TipoCombustivel", "TipoCombustivel é obrigatorio")
-                .IsGreaterThan(VeiculoId, 0, "VeiculoId", "VeiculoId é obrigatorio")
+                .IsNotNullOrEmpty(DataAbastecimento.ToString(), "DataAbastecimento", "DataAbastecimento é obrigatoria")
+                .IsNotNullOrEmpty(PostoCombustivel, "PostoCombustivel", "PostoCombustivel é obrigatorio")
+                .IsNotNullOrEmpty(UsuarioId.ToString(), "UsuarioId", "UsuarioId é obrigatorio")
+                .IsNotNullOrEmpty(TipoCombustivel, "TipoCombustivel", "TipoCombustivel é obrigatorio")
+                .IsNotNullOrEmpty(VeiculoId.ToString(), "VeiculoId", "VeiculoId é obrigatorio")
         );
     }
   }

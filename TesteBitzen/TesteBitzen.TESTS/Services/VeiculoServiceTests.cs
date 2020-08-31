@@ -10,13 +10,13 @@ using TesteBitzen.TESTS.Fakes;
 namespace TesteBitzen.TESTS.Services
 {
     [TestClass]
-    public class VeiculoServicesTests
+    public class VeiculoServiceTests
     {
         private readonly VeiculoService _service;
         private VeiculoDTO _dtoBase;
         private Guid _usuarioId;
 
-        public VeiculoServicesTests()
+        public VeiculoServiceTests()
         {
             _service = new VeiculoService(new FakeVeiculoRepository());
             _usuarioId = Guid.NewGuid();
@@ -60,15 +60,13 @@ namespace TesteBitzen.TESTS.Services
             var retorno = _service.Criar(_dtoBase);
             var veiculo = (Veiculo)retorno.Data;
             var id = veiculo.Id;
-            var quilometragem = veiculo.Quilometragem;
             var foto = veiculo.Foto;
             var placa = veiculo.Placa;
             var veiculoAlterado = new VeiculoDTO(veiculo.Marca, veiculo.Modelo, veiculo.Ano, "DEF-1234", veiculo.Tipo, veiculo.Combustivel, 1000, _usuarioId, "foto2.png");
             _service.Alterar(id, veiculoAlterado);
             Assert.AreEqual(
                 true, 
-                ((veiculo.Quilometragem != quilometragem &&
-                  veiculo.Foto != foto &&
+                ((veiculo.Foto != foto &&
                   veiculo.Placa != placa) && veiculo.Id == id)
             );
         }

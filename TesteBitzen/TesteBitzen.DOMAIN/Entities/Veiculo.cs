@@ -5,7 +5,7 @@ namespace TesteBitzen.DOMAIN.Entities
 {
     public class Veiculo : BaseEntitie
     {
-        public Veiculo(string marca, string modelo, int ano, string placa, string tipo, string combustivel, int quilometragem, Guid usuarioId, string foto)
+        public Veiculo(string marca, string modelo, int ano, string placa, string tipo, string combustivel, int quilometragemCadastro, Guid usuarioId, string foto)
         {
             Marca = marca;
             Modelo = modelo;
@@ -13,7 +13,8 @@ namespace TesteBitzen.DOMAIN.Entities
             Placa = placa;
             Tipo = tipo;
             Combustivel = combustivel;
-            Quilometragem = quilometragem;
+            QuilometragemCadastro = quilometragemCadastro;
+            QuilometragemRodada = quilometragemCadastro;
             UsuarioId = usuarioId;
             Foto = foto;
         }
@@ -24,15 +25,16 @@ namespace TesteBitzen.DOMAIN.Entities
         public string Placa { get; private set; }
         public string Tipo { get; private set; }
         public string Combustivel { get; private set; }
-        public int Quilometragem { get; private set; }
+        public int QuilometragemCadastro { get; private set; }
+        public int QuilometragemRodada { get; private set; }
         public Guid UsuarioId { get; private set; }
         public Usuario Usuario { get; private set; }
         public string Foto { get; private set; }
         public IEnumerable<Abastecimento> Abastecimentos { get; set; }
 
-        public void AlterarQuilomegragem(int quilometragem)
+        public void AlterarQuilometragemRodada(int quilometragem)
         {
-            Quilometragem = quilometragem;
+            QuilometragemRodada += quilometragem;
         }
 
         public void AlterarFoto(string foto)

@@ -10,13 +10,13 @@ using TesteBitzen.TESTS.Fakes;
 namespace TesteBitzen.TESTS.Services
 {
     [TestClass]
-    public class UsuarioServicesTests
+    public class UsuarioServiceTests
     {
         private readonly UsuarioService _service;
         private UsuarioDTO _dtoBase;
         private LoginDTO _dtoLogin;
 
-        public UsuarioServicesTests()
+        public UsuarioServiceTests()
         {
             _service = new UsuarioService(new FakeUsuarioRepository());
             _dtoBase = new UsuarioDTO("email@email.com.br", "123456", "teste da silva souza");
