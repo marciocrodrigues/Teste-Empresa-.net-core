@@ -92,7 +92,7 @@ namespace TesteBitzen.DOMAIN.Services.Veiculos
                 return new RetornoDTO(false, "Erro na Requisição, verificar valores enviado", dto.Notifications);
             }
 
-            var veiculo = new Veiculo(dto.Marca, dto.Modelo, dto.Ano, dto.Placa, dto.TipoVeiculo, dto.TipoCombustivel, dto.Quilometragem, dto.UsuarioId);
+            var veiculo = new Veiculo(dto.Marca, dto.Modelo, dto.Ano, dto.Placa, dto.TipoVeiculoId, dto.TipoCombustivelId, dto.Quilometragem, dto.UsuarioId);
 
             if (!_repository.Criar(veiculo))
             {

@@ -13,8 +13,8 @@ namespace TesteBitzen.DOMAIN.Dtos
                       string modelo, 
                       int ano, 
                       string placa, 
-                      string tipoVeiculo, 
-                      string tipoCombustivel, 
+                      int tipoVeiculoId, 
+                      int tipoCombustivelId, 
                       int quilometragem, 
                       Guid usuarioId)
     {
@@ -22,8 +22,8 @@ namespace TesteBitzen.DOMAIN.Dtos
       Modelo = modelo;
       Ano = ano;
       Placa = placa;
-      TipoVeiculo = tipoVeiculo;
-      TipoCombustivel = tipoCombustivel;
+      TipoVeiculoId = tipoVeiculoId;
+      TipoCombustivelId = tipoCombustivelId;
       Quilometragem = quilometragem;
       UsuarioId = usuarioId;
     }
@@ -32,8 +32,8 @@ namespace TesteBitzen.DOMAIN.Dtos
     public string Modelo { get; set; }
     public int Ano { get; set; }
     public string Placa { get; set; }
-    public string TipoVeiculo { get; set; }
-    public string TipoCombustivel { get; set; }
+    public int TipoVeiculoId { get; set; }
+    public int TipoCombustivelId { get; set; }
     public int Quilometragem { get; set; }
     public Guid UsuarioId { get; set; }
     public string Foto { get; set; }
@@ -46,8 +46,8 @@ namespace TesteBitzen.DOMAIN.Dtos
             .IsNotNullOrEmpty(Modelo, "Modelo", "Modelo é obrigatorio")
             .IsGreaterThan(Ano, 1900, "Ano", "Ano deve ser um valor valido")
             .IsNotNullOrEmpty(Placa, "Placa", "Placa é obrigatoria")
-            .IsNotNullOrEmpty(TipoVeiculo, "TipoVeiculo", "TipoVeiculo é obrigatorio")
-            .IsNotNullOrEmpty(TipoCombustivel, "TipoCombustivel", "TipoCombustivel é obrigatorio")
+            .IsGreaterThan(TipoVeiculoId, 0, "TipoVeiculo", "TipoVeiculo é obrigatorio")
+            .IsGreaterThan(TipoCombustivelId, 0, "TipoCombustivel", "TipoCombustivel é obrigatorio")
             .IsNotNullOrEmpty(UsuarioId.ToString(), "UsuarioId", "UsuarioId é obrigatorio")
       );
     }
